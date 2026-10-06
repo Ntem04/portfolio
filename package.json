@@ -1,0 +1,14 @@
+{
+  "name": "cleanpro-workspace",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "backend"
+  ],
+  "scripts": {
+    "dev:vitrine": "npm run dev --workspace=apps/vitrine",
+    "security:test": "snyk test",
+    "preinstall": "npx snyk test",
+    "prepare": "husky"
+  }
+}
